@@ -15,6 +15,8 @@ public class Test {
      Employee e=new Employee();
      System.out.println("***hello here service is"+s+" and the factory is  "+context.getBean("factory"));
      e.setName("Test");
-     s.save(e);
+    for(Employee employee:s.findAll()) {
+    	s.delete(employee);
+    }
  }
 }

@@ -36,8 +36,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
+	public void delete(Employee e) {
+		this.template.delete(e);
 		
 	}
 
@@ -49,8 +49,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		@SuppressWarnings("unchecked")
+		List<Employee> es=this.template.find("from Employee");
+		return es;
 	}
 
 	

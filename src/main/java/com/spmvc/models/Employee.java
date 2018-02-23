@@ -21,6 +21,7 @@ public class Employee{
 	private int id;
 	@Column(name = "name")
 	private String name;
+	private Long adress;
 	
 	public String getName() {
 		return name;
@@ -43,6 +44,15 @@ public class Employee{
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+
+	public void setAdress(Long adress) {
+		this.adress=adress;
+		
+	}
+	public Long getAdress() {
+		return adress;
 	}
 
 }
